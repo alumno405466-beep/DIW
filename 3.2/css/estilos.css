@@ -1,0 +1,59 @@
+h1 {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0px auto;
+  width: 50%;
+}
+
+
+td, th {
+  border: 1px solid black;
+}
+
+.horas {
+  background-color: green;
+}
+
+#recreo, #cinco {
+  background-color: yellow;
+}
+
+
+thead tr th::first-letter {
+  font-size: 2em;
+}
+
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.primera {
+  background-color: red;
+  color: white;
+}
+
+#fila .gb {
+  background-color: grey;
+  font-size: 2em;
+  text-align: center;
+}
+
+#listas li {
+  color: red;
+}
+
+#cinco {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+[colspan="2"]:not(.tabla1 [colspan="2"]), [colspan="3"] {
+  background-color: blue;
+}

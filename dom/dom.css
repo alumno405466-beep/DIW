@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+
+}
+
+header, nav, main, section, footer, .container {
+    margin: 20px auto;
+    width: 90%;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    background: skyblue;
+    list-style-type: none;
+    height: 5em;
+}
+
+nav li{
+    border: dotted;
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: flex-end;
+}
+
+
+nav li:nth-child(1){
+    order: 3;
+}
+
+
+nav li:nth-child(2), nav li:nth-child(4){
+    background-color: blue;
+    align-self: flex-start;
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: repeat(3, auto);
+    place-items: stretch stretch;
+    place-content: stretch space-around;
+    height: 10em;
+}
+
+
+section article:nth-child(2){
+    background-color: hotpink;
+    grid-row: 2/4;
+    grid-column: 1/4;
+}
+
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "rrss rrss rrss rrss"
+                         "contact . . contact"
+                         ". copy copy .";
+    height: 10em;
+}
+
+#rrss{
+    background-color: skyblue;
+    grid-area: rrss;
+}
+
+#contact{
+    background-color: lightcoral;
+    grid-area: contact;
+}
+
+#copy{
+    background-color: lightgrey;
+    grid-area: copy;
+}
+

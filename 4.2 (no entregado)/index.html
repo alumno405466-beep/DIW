@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejemplo de Maquetación Web - CSS Básico</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="sitio">
+    <header class="encabezadoSitio">
+      <div class="marca">
+        <span class="logoMarca">MW</span>
+        <h1>Demostración de Maquetación Web</h1>
+      </div>
+      <nav class="navegacionPrincipal">
+        <a href="#layouts">Diseños</a>
+        <a href="#centrado">Centrado</a>
+        <a href="#display">Display</a>
+        <a href="#posicion">Posicionamiento</a>
+        <a href="#columnas">Columnas</a>
+        <a href="#flotantes">Flotantes</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="layouts" class="seccionDiseños">
+        <h2>Tipos de diseño: fijo, elástico, fluido e híbrido</h2>
+        <div class="diseñoFijo">Diseño fijo (700px)</div>
+        <div class="diseñoElastico">Diseño elástico (50em)</div>
+        <div class="diseñoFluido">Diseño fluido (80%)</div>
+        <div class="diseñoHibrido">Diseño híbrido (70% con máximo de 900px)</div>
+      </section>
+
+      <section id="centrado" class="seccionCentrado">
+        <h2>Centrado de elementos</h2>
+        <div class="centradoHorizontalInline">Texto centrado en línea</div>
+        <div class="centradoHorizontalBloque">
+          <div class="cajaCentrada">Caja centrada horizontalmente</div>
+        </div>
+        <div class="centradoVerticalInline">Texto centrado verticalmente (inline)</div>
+        <div class="centradoVerticalBloque">
+          <div class="cajaVertical">Caja centrada verticalmente (flex)</div>
+        </div>
+      </section>
+
+      <section id="display" class="seccionDisplay">
+        <h2>Propiedad Display</h2>
+        <span class="ejemploInline">Elemento inline</span>
+        <span class="ejemploInlineBlock">Elemento inline-block</span>
+        <div class="ejemploBlock">Elemento block</div>
+      </section>
+
+      <section id="posicion" class="seccionPosicion">
+        <h2>Propiedad Position</h2>
+        <div class="contenedorPosiciones">
+          <div class="cajaEstatica">Posición estática</div>
+          <div class="cajaRelativa">Posición relativa</div>
+          <div class="cajaAbsoluta">Posición absoluta</div>
+          <div class="cajaFija">Posición fija</div>
+          <div class="cajaPegajosa">Posición sticky</div>
+        </div>
+        <div class="ejemploZindex">
+          <div class="cajaZindexUno">Z-index 1</div>
+          <div class="cajaZindexDos">Z-index 2 (encima)</div>
+        </div>
+      </section>
+
+      <section id="columnas" class="seccionColumnas">
+        <h2>Columnas</h2>
+        <div class="contenedorColumnas">
+          <p>Ejemplo de texto con varias columnas. Esta técnica se usa para dividir texto de manera similar a un periódico.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum euismod, viverra justo sed, cursus ligula.</p>
+          <p>Aliquam erat volutpat. Integer commodo facilisis justo, ac porttitor enim pulvinar non. Sed condimentum pretium dui.</p>
+        </div>
+      </section>
+
+      <section id="flotantes" class="seccionFlotantes">
+        <h2>Flotantes</h2>
+        <div class="contenedorFlotantes clearfix">
+          <div class="flotanteIzquierda">Elemento flotante a la izquierda</div>
+          <div class="flotanteDerecha">Elemento flotante a la derecha</div>
+          <p>Este texto rodea los elementos flotantes. Al usar la clase clearfix, el contenedor reconoce correctamente su altura.</p>
+          <div class="limpiarFlotantes">Elemento con clear: both</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pieSitio">
+      <p>Ejemplo completo de maquetación web básica en CSS, con explicaciones sencillas y separando el HTML del CSS.</p>
+    </footer>
+  </div>
+</body>
+</html>

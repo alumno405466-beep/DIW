@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Solicitud</title>
+</head>
+<body>
+
+    <form>
+
+        <fieldset class="datos-personales">
+            <legend>Datos Personales</legend>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Insertar apellidos">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Insertar nombre">
+            <br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Nº de contacto">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <br>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" placeholder="Nº de documento">
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha">
+            <br>
+
+            <label for="provincia">Provincia:</label>
+            <select id="provincia">
+                <option>-- Selecciona --</option>
+                <option>Madrid</option>
+                <option>Barcelona</option>
+                <option>Valencia</option>
+                <option>Sevilla</option>
+                <option>Toledo</option>
+                <option>Granada</option>
+                <option>Otra</option>
+            </select>
+
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" id="hombre"> Hombre
+            <input type="radio" name="sexo" id="mujer"> Mujer
+            <br>
+
+            <label>Dispositivo Preferido:</label>
+            <input type="checkbox" id="pc"> PC
+            <input type="checkbox" id="tableta"> Tableta
+            <input type="checkbox" id="movil"> Móvil
+            <br>
+
+            <label for="ide">IDE Preferido:</label>
+            <input type="text" id="ide">
+        </fieldset>
+
+        <fieldset class="otros-datos">
+            <legend>Otros datos de interés</legend>
+            <textarea placeholder="Indica cualquier otra información que consideres relevante"></textarea>
+        </fieldset>
+
+        <fieldset class="competencias">
+            <legend>Competencias de Programación</legend>
+
+            <label for="java">Nivel de Java:</label>
+            <input type="range" id="java" class="nivel" min="0" max="10">
+
+            <label for="python">Nivel de Python:</label>
+            <input type="range" id="python" class="nivel" min="0" max="10">
+            <br>
+
+            <label for="html">Nivel de HTML:</label>
+            <input type="range" id="html" class="nivel" min="0" max="10">
+
+            <label for="css">Nivel de CSS:</label>
+            <input type="range" id="css" class="nivel" min="0" max="10">
+        </fieldset>
+
+        <div class="botones">
+            <input type="button" value="Activado">
+            <input type="reset" value="Borrar Datos">
+            <input type="submit" value="Enviar Solicitud">
+            <input type="button" value="Desactivado" disabled>
+        </div>
+    </form>
+
+</body>
+</html>
