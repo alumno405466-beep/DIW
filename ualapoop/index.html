@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ualapoop</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor">
+            <div class="encabezado-superior">
+                <div class="logo">ualaPOOP</div>
+                <div class="barra-busqueda">
+                    <input type="text" placeholder="Buscar en Ualapoop">
+                </div>
+                <div class="acciones-usuario">
+                    <button>Favoritos</button>
+                    <button>Mensajes</button>
+                    <button>Mi perfil</button>
+                    <button class="boton-vender">Vender</button>
+                </div>
+            </div>
+            <div class="categorias">
+                <a href="#" class="categoria activa">Todos</a>
+                <a href="#" class="categoria">Moda</a>
+                <a href="#" class="categoria">Móviles</a>
+                <a href="#" class="categoria">Informática</a>
+                <a href="#" class="categoria">Videojuegos</a>
+                <a href="#" class="categoria">Hogar</a>
+                <a href="#" class="categoria">Deporte</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenedor">
+        <div class="contenido-principal">
+            <aside class="filtros">
+                <div class="seccion-filtro">
+                    <h3>Filtros <span class="limpiar-filtros">Limpiar filtros</span></h3>
+                </div>
+
+                <div class="seccion-filtro">
+                    <h3>Precio</h3>
+                    <div class="entradas-precio">
+                        <input type="number" placeholder="Mín" id="precio-min">
+                        <input type="number" placeholder="Máx" id="precio-max">
+                    </div>
+                    <input type="range" min="1" max="1000000" value="500" id="rango-precio">
+                </div>
+
+                <div class="seccion-filtro">
+                    <h3>Ubicación</h3>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-1" name="ubicacion" checked>
+                        <label for="ubicacion-1">Cualquier lugar</label>
+                    </div>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-2" name="ubicacion">
+                        <label for="ubicacion-2">A 5 km</label>
+                    </div>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-3" name="ubicacion">
+                        <label for="ubicacion-3">A 10 km</label>
+                    </div>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-4" name="ubicacion">
+                        <label for="ubicacion-3">A 20 km</label>
+                    </div>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-5" name="ubicacion">
+                        <label for="ubicacion-3">A 50 km</label>
+                    </div>
+                    <div class="opcion-filtro">
+                        <input type="radio" id="ubicacion-6" name="ubicacion">
+                        <label for="ubicacion-3">A 100 km</label>
+                    </div>
+                </div>
+
+                <button class="aplicar-filtros">Aplicar filtros</button>
+            </aside>
+
+            <section class="productos">
+                <div class="encabezado-productos">
+                    <h2>Productos destacados</h2>
+                    <div class="opciones-ordenar">
+                        <select id="ordenar-por">
+                            <option>Más relevantes</option>
+                            <option>Precio más bajo</option>
+                            <option>Precio más alto</option>
+                            <option>Más recientes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cuadricula-productos">
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">Patatas</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">0,35 €</div>
+                            <div class="titulo-producto">Bolsa de patatas fritas a medias</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Tomelloso</div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">iPhone</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">14 €</div>
+                            <div class="titulo-producto">iPhone robado</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Polán</div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">Vaso</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">10 €</div>
+                            <div class="titulo-producto">Vaso de agua medio lleno o medio vacío</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Burguillos</div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">Chaqueta</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">25 €</div>
+                            <div class="titulo-producto">Chaqueta de mi abuela</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Argés</div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">Dolor de espalda</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">1 €</div>
+                            <div class="titulo-producto">Dolor de espalda a domicilio</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Toledo</div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-producto">
+                        <div class="imagen-producto">Apoyo DAW</div>
+                        <div class="info-producto">
+                            <div class="precio-producto">Gratis</div>
+                            <div class="titulo-producto">Clases de apoyo DAW</div>
+                            <div class="ubicacion-producto"><span class="icono-ubicacion"></span>Inexistente</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="contenido-pie">
+                <div class="seccion-pie">
+                    <h3>Ualapoop</h3>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Cómo funciona</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="seccion-pie">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Condiciones de uso</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="seccion-pie">
+                    <h3>Ayuda</h3>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Contactar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="derechos-autor">
+                <p>&copy; 2025 Ualapoop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
