@@ -1,0 +1,178 @@
+//// =====================================
+//// VARIABLES
+//// =====================================
+$radius: 25px;
+$border-size: 3px;
+$text-serif: Georgia, "Times New Roman", serif;
+
+$nav-color: #92c255;
+$error: #ff4747;
+$warning: #ffd84a;
+$accepted: #8aff70;
+$normal: #4bb1ff;
+
+/// Mapa obligatorio Sass
+$card-colors: (
+    green: #b3e9a8,
+    blue: #1e77ff,
+    yellow: #d8b524,
+    purple: #d698d5
+);
+
+//// =====================================
+//// FUNCION DE COLOR
+//// =====================================
+@function card-color($name) {
+    @if map-has-key($card-colors, $name) {
+        @return map-get($card-colors, $name);
+    }
+
+    @else {
+        @warn "Color no encontrado";
+        @return gray;
+    }
+}
+
+//// =====================================
+//// MIXIN
+//// =====================================
+@mixin card-style($color) {
+    background-color: card-color($color);
+    border-radius: $radius;
+    border: $border-size solid black;
+    padding: 20px;
+    margin: 25px;
+    font-family: $text-serif;
+}
+
+//// =====================================
+//// BASE
+//// =====================================
+body {
+    margin: 0;
+    background: white;
+}
+
+.navbar {
+    background-color: $nav-color;
+
+    ul {
+        display: flex;
+        gap: 30px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+.status-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 8px;
+
+    .btn {
+        border-radius: $radius;
+        border: 2px solid black;
+        padding: 4px 12px;
+        cursor: pointer;
+    }
+
+    .error {
+        background-color: $error;
+    }
+
+    .warning {
+        background-color: $warning;
+    }
+
+    .accepted {
+        background-color: $accepted;
+    }
+
+    .normal {
+        background-color: $normal;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+//// =====================================
+//// TARJETAS
+//// =====================================
+@each $color, $value in $card-colors {
+    .#{$color} {
+        @include card-style($color);
+    }
+}
+
+.card {
+    img {
+        width: 100%;
+        border-radius: $radius;
+    }
+
+    figcaption {
+    font-weight: bold;
+    font-size: small;
+    display: inline-flex; // ← Muy importante
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 10px auto;
+    border: 2px solid black; // borde alrededor del texto
+    border-radius: 200px; // forma de cápsula
+}
+
+
+    .flag-container {
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .flag-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+//// =====================================
+//// BUCLES REQUERIDOS
+//// =====================================
+$i: 1;
+
+@while $i <=4 {
+    @debug "Cargando tarjeta #{$i}";
+    $i: $i + 1;
+}
+
+@for $step from 1 through 3 {
+    .margin-#{$step} {
+        margin: $step * 5px;
+    }
+}
+
+/// IF obligatorio con @error
+@if ($radius < 10px) {
+    @error "El radio debe ser mayor";
+}
+
+@else {
+    @debug "Radio correcto";
+}
