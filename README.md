@@ -36,7 +36,7 @@ Las creaciones se encuentran en [WEBS RESPONSIVAS](https://padlet.com/profesorlo
 
 
 ## [TAREA 1.3](https://github.com/alumno405466-beep/DIW/tree/main/1.3)
-El repositorio GITHUB donde subiréis vuestro proyecto, debe contener:
+El repositorio GITHUB contiene:
 - Fichero SCSS
 - Fichero CSS
 - Fichero HTML
@@ -53,3 +53,4 @@ Vuestro archivo SCSS, debe tener, como mínimo:
 - Uso de una función definida por el usuario.
 - Uso de las directivas @error / @warn / @debug
 - Uso de un mixin
+
